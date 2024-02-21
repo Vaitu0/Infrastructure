@@ -2,6 +2,7 @@ version: '2.4'
 services:
   jenkins:
     build: jenkins_controller
+    container_name: jenkins
     ports: 
       - "8880:8080"
       - "50000:50000"
@@ -9,8 +10,8 @@ services:
   sonarqube:
     depends_on:
       - jenkins 
-      image: sonarqube:10.2.1-community
-      contener_name: sonarqube
-      ports:
-        - "9000:9000"
-      restart: always
+    image: sonarqube:10.2.1-community
+    container_name: sonarqube
+    ports:
+      - "9000:9000"
+    restart: always
