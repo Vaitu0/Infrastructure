@@ -10,7 +10,7 @@ jenkins:
         - "Overall/Administer:panda"
   numExecutors: 0
 
-nodes:
+  nodes:
   - permanet:
       labelString: "agent"
       launcher:
